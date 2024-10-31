@@ -48,10 +48,13 @@ elementsScrollEfects.forEach(el => myObserver.observe(el));
 // change theme
 // Change theme
 const checkboxChange = document.querySelector('.checkbox');
+const allText = document.querySelectorAll('p');
 checkboxChange.addEventListener('change', () => {
     document.body.classList.toggle('sun');
     navbar_links.forEach(link => link.classList.toggle('sun-p'));
     navbar_logo.classList.toggle('sun-p');
+
+    allText.forEach(p => p.classList.toggle('sun-p'));
 });
 
 //       CURSOR POINTER
@@ -130,7 +133,7 @@ sections.forEach(section => {
 });
 
   const a_Links = document.querySelectorAll('a'); // Ajuste o seletor se necessário
-  console.log(a_Links)// Supondo que você tenha um elemento para o cursor
+  // console.log(a_Links)// Supondo que você tenha um elemento para o cursor
 
   a_Links.forEach(link => {
     link.addEventListener('mouseenter', () => {
@@ -151,7 +154,6 @@ sections.forEach(section => {
 // Itera sobre os elementos de footer
 footer.forEach(footer => {
   footer.addEventListener('mouseenter', () => {
-    console.log('bxjdbs')
     let navBar_mobile_links = document.querySelectorAll('nav.nav-mobile div a');
 
     cursor.style.backgroundColor = 'black';
@@ -161,7 +163,7 @@ footer.forEach(footer => {
     navbar_links.forEach(link => link.style.color = 'black'); // Muda a cor de todos os links do navbar
     navbar_logo.style.color = 'black'; // Muda a cor do logo
 
-    if(navBar_mobile_links.style.opacity === '1'){
+    if(navBar_mobile_links.style.display === 'block'){
       navBar_mobile_links.style.color = 'black'; // Muda a cor do logo
     }
   });

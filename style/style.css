@@ -87,6 +87,7 @@ header nav label{
     background: var(--standard-color-white);
 }
 .sun-p{
+    font-weight: 600;
     color: var(--standard-color);
 }
 
