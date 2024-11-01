@@ -203,9 +203,9 @@ function openNavBar(){
   // PROJECT OPEN
 // Project open
 document.addEventListener('DOMContentLoaded', () => {
-  let projectSection = document.querySelector('.section-task-automation');
+  let projectSection = document.querySelectorAll('.section-task-automation');
   document.querySelectorAll('.a-button')[0]?.addEventListener('click', () => {
-    projectSection.style.display = 'flex';
+    projectSection[0].style.display = 'flex';
   });
 });
 
