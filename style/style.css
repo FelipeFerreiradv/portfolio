@@ -535,14 +535,11 @@ footer{
 }
 
 .div-footer-timer{
-    position: absolute;
-    bottom: 20rem;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     font-size: 200px;
+    margin-top: 20rem;
 }
     
 /* project cursor */
@@ -685,7 +682,7 @@ footer{
 /* responsividade */
 @media only screen and (max-width: 670px){
     body{
-        cursor: default;
+        cursor: inherit;
     }
     header nav{
         display: none;
@@ -778,8 +775,64 @@ footer{
     .cursor-lazy{
         display: none;
     }
-    .div-footer-timer{
-        bottom: 0;
+    .section-task-automation{
+        top: -6rem;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin-top: -2rem;
+    }
+    .div-main-images-project.absolute{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 9rem;
+        width: 400px;
+        height: 600px;
+    }
+    .p-title-python{
+        font-size: 16px;
+    }
+    .h1-title-python{
+        font-size: 0px;
+    }
+    .p-python{
+        font-size: 10px;
+        max-width: 20000px;
+    }
+    .div-video{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 888;
+    }
+    .div-video div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .div-video video{
+        width: 100%;
+        height: 100%;
+    }
+    .div-tasks-images{
+        flex-direction: column;
+        gap: 0rem;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .div-tasks-images img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .div-svg-arrow{
+        position: absolute;
+        top: -23%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 @media only screen and (max-width: 400px){
@@ -805,7 +858,8 @@ footer{
         margin: 0 1rem;
     }
     .div-main-located div:last-child h2{
-        font-size: 28px;
+        font-size: 25px;
+        margin-left: 1rem;
     }
     .div-main-images-project{
         display: flex;
