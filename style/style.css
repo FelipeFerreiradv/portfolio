@@ -25,6 +25,11 @@
     display: none;
 }
 
+::selection{
+    background: var(--standard-color);
+    color: var(--standard-color-white);
+}
+
 html{
     scroll-behavior: smooth;
 }
