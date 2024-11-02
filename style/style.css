@@ -163,7 +163,8 @@ header nav a{
 }
 
 .blur-navbar{
-    backdrop-filter: blur(10px);
+    /* background: #ffffff20; */
+    backdrop-filter: blur(24px);
 }
 
 header nav.nav-mobile{
@@ -206,6 +207,11 @@ header nav.nav-mobile div a{
 .navbar-open{
     display: flex;
     opacity: 1;
+}
+
+.navbar-black{
+    font-weight: 650;
+    color: #000000;
 }
 
 /* main */
@@ -595,80 +601,6 @@ footer{
     transition: all 1s;
     z-index: 4;
 }
-
-/* project show */
-.section-task-automation{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    height: 1650px;
-    background: var(--medium-color-black);
-    overflow-y: hidden;
-    margin: 10rem auto;
-    animation: show-animation .5s ease-in-out;
-}
-
-.div-main-images-project.absolute{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    width: 1300px;
-    height: 600px;
-    margin: 10rem auto;
-}
-
-.p-python{
-    color: var(--standard-color-white);
-}
-
-.div-video{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 888;
-}
-
-.div-video div{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.div-video video{
-    width: 100%;
-    height: 100%;
-}
-
-.div-tasks-images{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 700px;
-    height: auto;
-    margin: 0 auto;
-}
-
-.div-tasks-images img{
-    width: 100%;
-    height: 100%;
-}
-
-.div-svg-arrow{
-    position: absolute;
-    top: 50%;
-    left: -17%;
-    transform: translateY(-50%);
-}
-
-.bi-play-fill { display: block; } /* Ícone play padrão */
-.bi-pause-fill { display: none; } /* Ícone pause escondido inicialmente */
-
 @keyframes show-animation {
     from{
         opacity: 0;

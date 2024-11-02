@@ -1,0 +1,117 @@
+@import url("style.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Libre Baskerville", serif;
+}
+
+:root{
+    --standard-color: #000000;
+    --medium-color-black: #000000f8;
+    --light-color-black: #141414;
+    --standard-color-white: #ffffff;
+    --standard-color-white-light: #ffffff84;
+    --toggleBtn-bgColor--night: var(--standard-color);
+    --toggleBtn-bgColor--day: var(--standard-color-white);
+    --standard-color-yellow: #f1c40f;
+    --standard-font: "Montserrat", sans-serif;
+}
+
+body{
+    background: var(--standard-color-white);
+}
+
+/* project */
+.seciton-video-main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.seciton-video-main video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.section-video-description{
+    width: 100%;
+    height: 600px;
+    margin: 5rem auto 0 auto;
+}
+
+.div-video-description{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 80%;
+    margin-left: 1rem;
+}
+
+.div-video-description div:nth-child(1) h1{
+    max-width: 300px;
+    font-weight: 550;
+    font-size: 30px;
+    font-family: var(--standard-font);
+}
+
+.div-video-description div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.div-video-description div:nth-child(2) p{
+    max-width: 550px;
+    font-weight: 500;
+    font-family: var(--standard-font);
+    font-size: 18px;
+    color: var(--light-color-black);
+}
+
+/* inages of project section */
+.section-images-project{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.section-images-project div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 1rem;
+}
+
+.section-images-project img{
+    width: 100%;
+    height: 100%;
+}
+
+/* footer */
+footer{
+    background: var(--standard-color);
+}
+
+footer h2, p{
+    color: var(--standard-color-white);
+}
+
+.div-footer-links-align div a{
+    color: var(--standard-color-white);
+}
+
+@media only screen and (max-width: 670px){
+    video{
+        width: auto;
+        height: auto;
+    }
+    .div-video-description div:nth-child(2) p{
+        max-width: 100%;
+    }
+}

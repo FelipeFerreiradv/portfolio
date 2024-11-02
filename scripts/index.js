@@ -22,18 +22,28 @@ window.addEventListener('scroll', () => {
 });
 
 // Infinite Scroll
-document.addEventListener("DOMContentLoaded", () => {
-    const mainContent = document.querySelector("main");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const mainContent = document.querySelector("main");
+//   const maxPages = 3;
 
-    const infiniteScroll = () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-            const clone = mainContent.cloneNode(true);
-            document.body.appendChild(clone);
-        }
-    };
+//   const infiniteScroll = () => {
+//       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+//           const clone = mainContent.cloneNode(true);
+//           document.body.appendChild(clone);
 
-    window.addEventListener("scroll", infiniteScroll);
-});
+//           // Seleciona todos os elementos <main>
+//           const mainContentAll = document.querySelectorAll("main");
+//           console.log(`Número de páginas no DOM: ${mainContentAll.length}`);
+
+//           // Remove o primeiro elemento <main> quando excede maxPages
+//           if (mainContentAll.length > maxPages) {
+//               console.log('Removendo a primeira página');
+//               mainContentAll[0].remove();
+//           }
+//       }
+//   };
+//   window.addEventListener("scroll", infiniteScroll);
+// });
 
 // Scroll effects
 const elementsScrollEfects = document.querySelectorAll('.hidden');
@@ -121,8 +131,6 @@ sections.forEach(section => {
     if (sectionBgColor) {
       cursor_images.style.backgroundColor = sectionBgColor;
     }
-
-    
   });
   
   section.addEventListener('mouseleave', () => {
@@ -181,7 +189,7 @@ footer.forEach(footer => {
 });
 
 // Timer
-let timer_footer = document.querySelector('.div-footer-timer');
+let timer_footer = document.querySelector('.div-footer-timer p');
 let timer = 0;
 setInterval(() => {
     timer_footer.innerHTML = (timer++).toFixed(2).replace('.', ':');
@@ -201,60 +209,3 @@ function openNavBar(){
     document.querySelector('.div-mobile-button p').innerHTML = 
     (navBar_mobile.style.display === 'flex') ? 'Close' : 'Menu';
 }
-
-  // PROJECT OPEN
-// Project open
-document.addEventListener('DOMContentLoaded', () => {
-  const projectSections = document.querySelectorAll('.section-task-automation');
-  const a_links_python = document.querySelectorAll('.a-button');
-  
-  a_links_python.forEach((link, index) => {
-    link.addEventListener('click', () => {
-      projectSections[index].style.display = 'flex';
-    });
-  });
-});
-
-// Video control
-const videoBackends = document.querySelectorAll('.div-video video');
-const svgPlayVideos = document.querySelectorAll('.bi-play-fill ');
-const svgPauseVideos = document.querySelectorAll('.bi-pause-fill ');
-
-const toggleVideo = (index) => {
-  const video = videoBackends[index];
-  const isPlaying = !video.paused;
-
-  if (isPlaying) {
-    video.pause();
-
-    svgPlayVideos[index].style.display = 'block';
-    svgPauseVideos[index].style.display = 'none';
-  } else {
-    video.play();
-    svgPlayVideos[index].style.display = 'none';
-    svgPauseVideos[index].style.display = 'block';
-  }
-};
-
-// Add event listeners to each play and pause button
-svgPlayVideos.forEach((svgPlay, index) => {
-  svgPlay.addEventListener('click', () => toggleVideo(index));
-});
-
-svgPauseVideos.forEach((svgPause, index) => {
-  svgPause.addEventListener('click', () => toggleVideo(index));
-});
-
-// Closer for project sections
-const divCloser = document.querySelectorAll('.div-svg-arrow');
-const projectSections = document.querySelectorAll('.section-task-automation');
-
-divCloser.forEach((closer, index) => {
-  closer.addEventListener('click', () => {
-    projectSections[index].style.display = 'none';
-    // Ensure videos are paused when the section is closed
-    videoBackends[index].pause();
-    svgPlayVideos[index].style.display = 'block';
-    svgPauseVideos[index].style.display = 'none';
-  });
-});

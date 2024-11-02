@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://wallpaperaccess.com/full/481679.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js" defer></script>  
     <title>Felipe Ferreira - Portfólio</title>
 </head>
 <body>
     <?php 
     include_once('php/navbar.php')
     ?>
+    <!-- navbar -->
     <header>
         <div>
             <p>FELIPE FERREIRA</p>
@@ -31,9 +32,11 @@
                 <div class="div-ball"></div>
             </label>
         </nav>
+        <!-- button to open navbar mobile -->
         <div class="div-mobile-button" onclick="openNavBar()">
             <p>Menu</p>
         </div>
+        <!-- navbar mobile -->
         <nav class="nav-mobile">
             <div>
                 <a href="work.html">Work</a>
@@ -43,6 +46,7 @@
         </nav>
     </header>
     <main>
+        <!-- projects front-end -->
         <section class="section-main-portfolio">
             <div class="div-img-main">
                 <img src="images/image-perflog-main.jpeg" alt="">
@@ -63,6 +67,7 @@
                     <h2 class="located-h2">Freelancer <br> Designer & Developer</h2>
                 </div>
             </div>
+            <!-- automatic wrapepr -->
             <div class="div-main-scroll-auto scroll-text-animation animation-scroll-text">
                 <p>Felipe Developer - </p>
                 <p>Felipe Developer - </p>
@@ -123,16 +128,18 @@
                 </div>
             </div>
         </section>
+        <!-- felip.dev section -->
         <section class="section-title-name footer">
             <p>felipe.dev</p>
         </section>
+        <!-- projects backend -->
         <section class="section-works-database">
             <div class="div-woeks-database-align">
                 <div class="div-works-database">
                     <img src="images/task automation.png" alt="">
                     <div>
                         <h2>Task Automation</h2>
-                        <a href="javascript:void(0)"><button class="a-button">SHOW MORE</button></a>
+                        <a href="pages/task-automation.html"><button class="a-button">SHOW MORE</button></a>
                     </div>
                 </div>
                 <div class="div-works-database">
@@ -159,148 +166,9 @@
                     </div>
                 </div>
             </div>
-            <section class="section-task-automation">
-                <div class="div-main-images-project absolute">
-                    <div class="div-video">
-                        <video src="videos/task-automation.mp4" autoplay></video>
-                        
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#ffffff" class="bi bi-play-fill" viewBox="0 0 16 16">
-                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#ffffff" class="bi bi-pause-fill" viewBox="0 0 16 16" style="display: none;">
-                                <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="div-main-images-project-title">
-                        <div>
-                            <p class=".p-title-python">STYLISH SPACES</p>
-                            <h1 class="h1-title-python">The stylish blog site</h1>
-                        </div>
-                        <div>
-                            <p class="p-python">Multimidia divulgation including sensive content sjhdbshjvdsvdusva ashvbdjhasvdjhsavdvvvvv jasvhdhhdhdhdhdhdhdhdh asjvdhddhdhdhdhdhdh jsdvgfgfgfgfgfgfgfgffsdhhhhh ihdfsbssbsbsbsbbbbbbbbsbsbsbsbsbsbsbss</p>
-                        </div>
-                    </div>
-
-                    <div class="div-svg-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffffff" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="div-tasks-images">
-                    <img src="images/first-image-projects.jpeg" alt="">
-                    <img src="images/second-image-projects.jpg" alt="">
-                </div>
-            </section>
-            <section class="section-task-automation">
-                <div class="div-main-images-project absolute">
-                    <div class="div-video">
-                        <video src="videos/analyse-database.mp4" autoplay></video>
-                        
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#ffffff" class="bi bi-play-fill" viewBox="0 0 16 16">
-                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#ffffff" class="bi bi-pause-fill" viewBox="0 0 16 16" style="display: none;">
-                                <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="div-main-images-project-title">
-                        <div>
-                            <p>STYLISH SPACES</p>
-                            <h1>The stylish blog site</h1>
-                        </div>
-                        <div>
-                            <p class="p-python">Você foi contratado por uma empresa com mais de 800 mil clientes para um projeto de Dados. Recentemente a empresa percebeu que da sua base total de clientes, a maioria são clientes inativos, ou seja, que já cancelaram o serviço. Precisando melhorar seus resultados ela quer conseguir entender os principais motivos desses cancelamentos e quais as ações mais eficientes para reduzir esse número.</p>
-                        </div>
-                    </div>
-
-                    <div class="div-svg-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffffff" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="div-tasks-images">
-                    <img src="images/first-image-projects.jpeg" alt="">
-                    <img src="images/second-image-projects.jpg" alt="">
-                </div>
-            </section>
-            <section class="section-task-automation">
-                <div class="div-main-images-project absolute">
-                    <div class="div-video">
-                        <video src="videos/ia-generative.mp4" autoplay></video>
-                        
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#ffffff" class="bi bi-play-fill" viewBox="0 0 16 16">
-                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#ffffff" class="bi bi-pause-fill" viewBox="0 0 16 16" style="display: none;">
-                                <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="div-main-images-project-title">
-                        <div>
-                            <p>STYLISH SPACES</p>
-                            <h1>The stylish blog site</h1>
-                        </div>
-                        <div>
-                            <p class="p-python">Você foi contratado por uma empresa com mais de 800 mil clientes para um projeto de Dados. Recentemente a empresa percebeu que da sua base total de clientes, a maioria são clientes inativos, ou seja, que já cancelaram o serviço. Precisando melhorar seus resultados ela quer conseguir entender os principais motivos desses cancelamentos e quais as ações mais eficientes para reduzir esse número.</p>
-                        </div>
-                    </div>
-
-                    <div class="div-svg-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffffff" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="div-tasks-images">
-                    <img src="images/first-image-projects.jpeg" alt="">
-                    <img src="images/second-image-projects.jpg" alt="">
-                </div>
-            </section>
-            <section class="section-task-automation">
-                <div class="div-main-images-project absolute">
-                    <div class="div-video">
-                        <video src="videos/task-automatation-two.mp4" autoplay></video>
-                        
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#ffffff" class="bi bi-play-fill" viewBox="0 0 16 16">
-                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#ffffff" class="bi bi-pause-fill" viewBox="0 0 16 16" style="display: none;">
-                                <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="div-main-images-project-title absolute">
-                        <div>
-                            <p>STYLISH SPACES</p>
-                            <h1>The stylish blog site</h1>
-                        </div>
-                        <div>
-                            <p class="p-python">Você foi contratado por uma empresa com mais de 800 mil clientes para um projeto de Dados. Recentemente a empresa percebeu que da sua base total de clientes, a maioria são clientes inativos, ou seja, que já cancelaram o serviço. Precisando melhorar seus resultados ela quer conseguir entender os principais motivos desses cancelamentos e quais as ações mais eficientes para reduzir esse número.</p>
-                        </div>
-                    </div>
-
-                    <div class="div-svg-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffffff" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="div-tasks-images">
-                    <img src="images/first-image-projects.jpeg" alt="">
-                    <img src="images/second-image-projects.jpg" alt="">
-                </div>
-            </section>
         </section>
     </main>
+    <!-- footer -->
     <footer class="footer">
         <div class="div-footer">
             <div class="div-footer-links-title">
@@ -347,11 +215,13 @@
                 </div>
             </div>
         </div>
+        <!-- timer in the website -->
         <div class="div-footer-timer">
             <p>0</p>
             <!-- 1:00:00 -->
         </div>
     </footer>
+    <!-- cursor -->
     <div class="cursor" data-cursor></div>
     <div class="cursor-lazy" data-cursor-lazy></div>
     <div class="div-projects-cursor" data-div-projects-cursor>
