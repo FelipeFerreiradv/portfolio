@@ -224,6 +224,7 @@ const toggleVideo = (index) => {
 
   if (isPlaying) {
     video.pause();
+
     svgPlayVideos[index].style.display = 'block';
     svgPauseVideos[index].style.display = 'none';
   } else {
