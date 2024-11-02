@@ -485,8 +485,10 @@ header nav.nav-mobile div a{
 }
 
 footer{
+    position: relative;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
     background: var(--standard-color-white);
 }
 
@@ -533,10 +535,13 @@ footer{
 }
 
 .div-footer-timer{
+    position: absolute;
+    bottom: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20rem auto;
     font-size: 200px;
 }
     
@@ -772,6 +777,9 @@ footer{
     }
     .cursor-lazy{
         display: none;
+    }
+    .div-footer-timer{
+        bottom: 0;
     }
 }
 @media only screen and (max-width: 400px){
