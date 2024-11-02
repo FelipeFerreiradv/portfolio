@@ -121,6 +121,8 @@ sections.forEach(section => {
     if (sectionBgColor) {
       cursor_images.style.backgroundColor = sectionBgColor;
     }
+
+    
   });
   
   section.addEventListener('mouseleave', () => {
