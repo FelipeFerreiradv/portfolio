@@ -534,7 +534,7 @@ footer{
     margin: 20rem auto;
     font-size: 200px;
 }
-
+    
 /* project cursor */
 .div-projects-cursor{
     position: fixed;
@@ -674,6 +674,9 @@ footer{
 
 /* responsividade */
 @media only screen and (max-width: 670px){
+    body{
+        cursor: default;
+    }
     header nav{
         display: none;
     }
@@ -756,8 +759,17 @@ footer{
         margin: 13rem auto;
         font-size: 100px;
     }
+    .cursor{
+        display: none;
+    }
+    .cursor-lazy{
+        display: none;
+    }
 }
 @media only screen and (max-width: 400px){
+    body{
+        cursor: default;
+    }
     .section-main-portfolio{
         height: 60vh;
     }
@@ -791,6 +803,10 @@ footer{
     .div-main-images-project img{   
         width: 350px;
         height: 560px;
+    }
+    .div-works-database img{
+        object-fit: contain;
+        height: 300px;
     }
     .section-task-automation{
         top: -6rem;
