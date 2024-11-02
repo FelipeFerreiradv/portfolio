@@ -613,7 +613,8 @@ footer{
     margin: 10rem auto;
 }
 
-.div-main-images-project.absolute p{
+.p-python{
+    max-width: 20000px;
     color: var(--standard-color-white);
 }
 
@@ -657,6 +658,9 @@ footer{
     left: -17%;
     transform: translateY(-50%);
 }
+
+.bi-play-fill { display: block; } /* Ícone play padrão */
+.bi-pause-fill { display: none; } /* Ícone pause escondido inicialmente */
 
 @keyframes show-animation {
     from{

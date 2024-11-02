@@ -163,9 +163,9 @@ footer.forEach(footer => {
     navbar_links.forEach(link => link.style.color = 'black'); // Muda a cor de todos os links do navbar
     navbar_logo.style.color = 'black'; // Muda a cor do logo
 
-    if(navBar_mobile_links.style.display === 'block'){
-      navBar_mobile_links.style.color = 'black'; // Muda a cor do logo
-    }
+    // if(navBar_mobile_links.style.display === 'block'){
+    //   navBar_mobile_links.style.color = 'black'; // Muda a cor do logo
+    // }
   });
 
   footer.addEventListener('mouseleave', () => {
@@ -203,36 +203,55 @@ function openNavBar(){
   // PROJECT OPEN
 // Project open
 document.addEventListener('DOMContentLoaded', () => {
-  let projectSection = document.querySelectorAll('.section-task-automation');
-  document.querySelectorAll('.a-button')[0]?.addEventListener('click', () => {
-    projectSection[0].style.display = 'flex';
+  const projectSections = document.querySelectorAll('.section-task-automation');
+  const a_links_python = document.querySelectorAll('.a-button');
+  
+  a_links_python.forEach((link, index) => {
+    link.addEventListener('click', () => {
+      projectSections[index].style.display = 'flex';
+    });
   });
 });
 
 // Video control
-const videoBackend = document.querySelector('.div-video video');
-const [svgPlayVideo, svgPlayVideoSecond] = document.querySelectorAll('.div-video div svg');
+const videoBackends = document.querySelectorAll('.div-video video');
+const svgPlayVideos = document.querySelectorAll('.bi-play-fill ');
+const svgPauseVideos = document.querySelectorAll('.bi-pause-fill ');
 
-const toggleVideo = () => {
-  const isPlaying = !videoBackend.paused;
+const toggleVideo = (index) => {
+  const video = videoBackends[index];
+  const isPlaying = !video.paused;
+
   if (isPlaying) {
-    videoBackend.pause();
-    svgPlayVideo.style.display = 'block';
-    svgPlayVideoSecond.style.display = 'none';
+    video.pause();
+    svgPlayVideos[index].style.display = 'block';
+    svgPauseVideos[index].style.display = 'none';
   } else {
-    videoBackend.play();
-    svgPlayVideo.style.display = 'none';
-    svgPlayVideoSecond.style.display = 'block';
+    video.play();
+    svgPlayVideos[index].style.display = 'none';
+    svgPauseVideos[index].style.display = 'block';
   }
 };
 
-svgPlayVideo.addEventListener('click', toggleVideo);
-svgPlayVideoSecond.addEventListener('click', toggleVideo);
+// Add event listeners to each play and pause button
+svgPlayVideos.forEach((svgPlay, index) => {
+  svgPlay.addEventListener('click', () => toggleVideo(index));
+});
 
-// closer
-let projectSection = document.querySelector('.section-task-automation');
-const divCloser = document.querySelector('.div-svg-arrow');
+svgPauseVideos.forEach((svgPause, index) => {
+  svgPause.addEventListener('click', () => toggleVideo(index));
+});
 
-divCloser.addEventListener('click', () =>{
-  projectSection.style.display = 'none';
+// Closer for project sections
+const divCloser = document.querySelectorAll('.div-svg-arrow');
+const projectSections = document.querySelectorAll('.section-task-automation');
+
+divCloser.forEach((closer, index) => {
+  closer.addEventListener('click', () => {
+    projectSections[index].style.display = 'none';
+    // Ensure videos are paused when the section is closed
+    videoBackends[index].pause();
+    svgPlayVideos[index].style.display = 'block';
+    svgPauseVideos[index].style.display = 'none';
+  });
 });
