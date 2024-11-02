@@ -687,30 +687,33 @@ footer{
         height: 60vh;
     }
     .div-main-located-children{
-        width: 270px;
+        width: 200px;
         height: 60px;
     }
     .div-main-located-children p{
         font-size: 14px;
     }
-    
     .div-main-located-children svg{
         width: 50px;
         height: 50px;
         padding: 13px;
     }
-    
+
     .div-main-located div:last-child{
-        margin: 0 6.5rem;
+        margin: 0 2rem;
     }
-    
     .div-main-images-project{
-        width: 100%;
-        height: 560px;
-        margin: 20rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15rem auto;
+        height: 500px;
+    }
+    .div-main-images-project.reverse{
+        flex-direction: column-reverse;
     }
     .div-main-images-project img{   
-        width: 300px;
+        width: 80%;
         height: 560px;
     }
     .div-main-images-project-title div:last-child p{
@@ -796,6 +799,7 @@ footer{
         flex-direction: column;
         align-items: center;
         margin: 15rem auto;
+        height: 500px;
     }
     .div-main-images-project.reverse{
         flex-direction: column-reverse;
