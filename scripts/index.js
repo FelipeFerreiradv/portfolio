@@ -55,17 +55,45 @@ const myObserver = new IntersectionObserver((entries) => {
 
 elementsScrollEfects.forEach(el => myObserver.observe(el));
 
-// change theme
 // Change theme
+// Seleciona o checkbox
 const checkboxChange = document.querySelector('.checkbox');
-const allText = document.querySelectorAll('p');
-checkboxChange.addEventListener('change', () => {
-    document.body.classList.toggle('sun');
-    navbar_links.forEach(link => link.classList.toggle('sun-p'));
-    navbar_logo.classList.toggle('sun-p');
 
-    allText.forEach(p => p.classList.toggle('sun-p'));
+// Verifica a existência dos elementos
+
+// Evento de troca de tema
+checkboxChange.addEventListener('change', () => {
+  const navbar_links = document.querySelectorAll('header nav a');
+  const navbar_logo = document.querySelector('header div p');
+  const images_section = document.querySelector('.section-main-images-project')
+  const images_section_h1 = document.querySelectorAll('.section-main-images-project h1')
+  const images_section_p = document.querySelectorAll('.section-main-images-project p')
+
+  const dev_section = document.querySelector('.section-title-name');
+  const footer = document.querySelector('footer');
+
+  // troca o tema da seção images
+  images_section.classList.toggle('sun');
+  images_section_h1.forEach(h1 => h1.classList.toggle('sun-p'));
+  images_section_p.forEach(p => p.classList.toggle('sun-p'));
+  
+  // Troca o tema dos links do navbar
+  navbar_links.forEach(link => link.classList.toggle('sun-p'));
+
+  // Troca o tema do logo do navbar
+  navbar_logo.classList.toggle('sun-p');
+
+  // section dev
+  dev_section.classList.toggle('sun-dark'); 
+  footer.classList.toggle('sun-dark');
+
+  // Troca o tema para cada footer
+  footer.classList.toggle('sun-dark');
+
+  // muda o body de cor
+  document.body.classList.toggle('sun');
 });
+
 
 //       CURSOR POINTER
 // altera o cursor
