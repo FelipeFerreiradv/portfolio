@@ -121,13 +121,15 @@ if(navBar_mobile.style.display != 'flex'){
 // video toca automaticamente
 // Reproduz o vídeo automaticamente ao carregar a página sem som
 window.addEventListener("load", () => {
-    let video = document.querySelector("video");
+    let video = document.querySelectorAll("video");
 
-    if (video) {
+    video.forEach(video =>{
+      if (video) {
         video.muted = true; // Silencia o vídeo
         video.play().catch(error => {
             console.warn("Reprodução automática bloqueada. Usuário precisa interagir com a página.");
         });
         video.loop = true;
     }
+    });
 });
