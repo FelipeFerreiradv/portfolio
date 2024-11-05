@@ -650,7 +650,7 @@ footer {
     }
 
     header {
-        width: calc(100% - 6rem);
+        width: calc(100% - 2rem);
         padding: .5rem 2rem;
     }
 
