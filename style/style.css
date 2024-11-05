@@ -505,7 +505,7 @@ header nav.nav-mobile div a{
 footer{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     background: var(--standard-color-white);
 }
