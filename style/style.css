@@ -36,11 +36,10 @@ html {
 
 body {
     position: relative;
-    overflow-x: hidden;
     background: var(--medium-color-black);
     cursor: none;
+    width: 100vw;
     overflow-x: hidden;
-    width: 100vw
 }
 
 input#icheckbox {
@@ -142,11 +141,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% - 4rem);
+    width: 100%;
     padding: .5rem 4rem;
-    z-index: 1;
+    z-index: 100;
     transition: .7s ease-in-out;
-    overflow-x: hidden;
 }
 
 header div p {
@@ -177,12 +175,12 @@ header nav.nav-mobile {
     position: absolute;
     top: 0;
     right: 0;
-    display: none;
-    align-items: end;
+    display: none; /* Inicialmente oculto */
     flex-direction: column;
+    align-items: end;
     width: 100%;
-    height: 100vh;
-    padding: 100px 20px;
+    height: 100%;
+    padding: 10px 20px;
     background: #000000dd;
     backdrop-filter: blur(50px);
     animation: show-animation .5s ease-in-out;
@@ -197,7 +195,8 @@ header nav.nav-mobile div {
 
 header nav.nav-mobile div a {
     font-size: 40px;
-    z-index: 1;
+    color: var(--standard-color-white);
+    z-index: 5;
 }
 
 .div-mobile-button {
@@ -209,20 +208,15 @@ header nav.nav-mobile div a {
     font-size: 13px;
 }
 
-.navbar-open {
-    display: flex;
-}
-
 .navbar-black {
     font-weight: 650;
     color: #000000;
 }
 
-.section-main-portfolio {
+.section-main-portfolio{
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
     scroll-behavior: smooth;
 }
 
@@ -422,7 +416,7 @@ header nav.nav-mobile div a {
     width: 100%;
     height: 100vh;
     background: var(--standard-color-white);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .section-title-name p {
@@ -650,7 +644,6 @@ footer {
     }
 
     header {
-        width: calc(100% - 2rem);
         padding: .5rem 2rem;
     }
 
@@ -848,7 +841,7 @@ footer {
     }
 
     .section-main-portfolio {
-        height: 60vh;
+        height: 60vh;        
     }
 
     .div-main-located-children {
@@ -951,12 +944,5 @@ footer {
     .div-tasks-images img {
         width: 100%;
         height: 100%;
-    }
-
-    .div-svg-arrow {
-        position: absolute;
-        top: -23%;
-        left: 50%;
-        transform: translateX(-50%);
     }
 }
