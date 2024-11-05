@@ -31,12 +31,11 @@ body{
     overflow: hidden;
 }
 
-.seciton-video-main video{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+.seciton-video-main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: optimizeQuality;
 }
 
 .section-video-description{
@@ -107,10 +106,6 @@ footer h2, p{
 }
 
 @media only screen and (max-width: 670px){
-    video{
-        width: auto;
-        height: auto;
-    }
     .div-video-description div:nth-child(2) p{
         max-width: 100%;
     }

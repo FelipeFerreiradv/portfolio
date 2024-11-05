@@ -195,7 +195,7 @@ header nav.nav-mobile div{
 
 header nav.nav-mobile div a{
     font-size: 40px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .div-mobile-button {
@@ -209,7 +209,6 @@ header nav.nav-mobile div a{
 
 .navbar-open{
     display: flex;
-    opacity: 1;
 }
 
 .navbar-black{
@@ -307,13 +306,13 @@ header nav.nav-mobile div a{
 }
 
 /* project main */
-.section-main-images-project{
+#section-main-images-project{
     width: 100%;
     height: 100%;
     margin: 10rem auto;
 }
 
-.section-main-images-project p{
+#section-main-images-project p{
     color: var(--standard-color-white);
 }
 
