@@ -835,6 +835,12 @@ footer {
     .div-footer-links-title {
         margin: 4rem;
     }
+    .div-main-scroll-auto p{
+        font-size: 40px;
+    }
+    .div-main-located div:last-child {
+        gap: 2rem;
+    }
 }
 
 @media only screen and (max-width: 400px) {
