@@ -448,6 +448,7 @@ header nav.nav-mobile div a {
     flex-direction: column;
     gap: 13rem;
     padding: 15rem 2rem;
+    overflow: hidden;
 }
 
 .div-woeks-database-align {
@@ -626,6 +627,7 @@ footer {
 
 .show {
     transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
     filter: blur(0);
     transition: all 1s;
