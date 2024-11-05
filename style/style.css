@@ -458,6 +458,16 @@ header nav.nav-mobile div a{
     width: 50vw;
 }
 
+.div-works-database:nth-child(2){
+    transition-delay: 400ms;
+}
+.div-works-database.three{
+    transition-delay: 700ms;
+}
+.div-works-database.four{
+    transition-delay: 1000ms;
+}
+
 .div-works-database img{
     width: 100%;
     height: 600px;
@@ -591,13 +601,19 @@ footer{
 }
 
 .hidden{
-    transform: translateY(0);
+    transform: translateY(150px);
     opacity: 0;
-    filter: blur(10px);
+    filter: blur(15px);
+    transition: all 2s;
+}
+.hidden-two{
+    transform: translateX(100px);
+    opacity: 0;
+    filter: blur(15px);
     transition: all 2s;
 }
 .show{
-    transform: translateY(-150px);
+    transform: translateY(0);
     opacity: 1;
     filter: blur(0);
     transition: all 1s;
@@ -616,6 +632,9 @@ footer{
 @media only screen and (max-width: 670px){
     body{
         cursor: inherit;
+    }
+    header{
+        padding: .5rem 2rem;
     }
     header nav{
         display: none;
@@ -765,6 +784,9 @@ footer{
         top: -23%;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .div-footer-links-title{
+        margin: 4rem;
     }
 }
 @media only screen and (max-width: 400px){

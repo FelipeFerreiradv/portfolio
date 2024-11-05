@@ -47,6 +47,7 @@ window.addEventListener('scroll', () => {
 
 // Scroll effects
 const elementsScrollEfects = document.querySelectorAll('.hidden');
+const elementsScrollEfectsTwo = document.querySelectorAll('.hidden-two');
 const myObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         entry.target.classList.toggle('show', entry.isIntersecting);
@@ -54,6 +55,7 @@ const myObserver = new IntersectionObserver((entries) => {
 });
 
 elementsScrollEfects.forEach(el => myObserver.observe(el));
+elementsScrollEfectsTwo.forEach(el => myObserver.observe(el));
 
 // Change theme
 // Seleciona o checkbox
