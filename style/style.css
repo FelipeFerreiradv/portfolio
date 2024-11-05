@@ -656,6 +656,7 @@ footer {
     }
 
     .section-main-portfolio {
+        overflow-x: hidden;
         height: 60vh;
     }
 
